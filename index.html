@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>map.io</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+    <script type="text/javascript" src="scriptgeo.js"></script>
+    <script src="https://use.fontawesome.com/d79c0f1bb9.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+        <div class="row">
+          <div class="col-md-3 nopadding">
+            <div class="sidebar">
+                  <h1>map.io</h1>
+                  <a id="origin-link" class="btn-large waves-effect waves-light red" href="#">ACTIVER LOCALISER</a>
+                  <form>
+                    <div id="mode-selector" class="controls">
+
+                      <input type="radio" name="type" id="changemode-walking"
+                      checked="checked">
+                      <label for="changemode-walking"><img src="img/walkingman.png"
+                      alt="walkingman"></label>
+
+                      <input type="radio" name="type" id="changemode-transit">
+                      <label for="changemode-transit"><img id="transport"
+                      src="img/transport.png" alt="transport"></label>
+
+                      <input type="radio" name="type" id="changemode-driving">
+                      <label for="changemode-driving"><img src="img/car.png" alt="car"></label>
+
+                      <input type="radio" name="type" id="changemode-bicycling">
+                      <label for="changemode-bicycling" class="bycycle">
+                      <i class="fa fa-bicycle fa-2x " aria-hidden="true"></i></label>
+                    </div>
+                    <br/>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input id="origin" type="text" class="validate">
+                        <label for="origin">origin</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input id="destination-input" type="text" class="validate">
+                        <label for="destination-input">destination</label>
+                      </div>
+                    </div>
+                  </form>
+              <div id="right-panel">
+                <p>Total Distance: <span id="total"></span> </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9 nopadding">
+            <div id="map"></div>
+          </div>
+        </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5BVMReKemMiW5AKzplPQtowCEbaeY-fY&libraries=places&callback=initMap"
+    async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  </body>
+  </body>
+</html>
